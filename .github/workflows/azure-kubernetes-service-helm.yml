@@ -56,7 +56,7 @@ jobs:
             --set mcpContextForge.secret.SSO_ENABLED=true /
             --set mcpContextForge.secret.SSO_ENTRA_ENABLED=true /
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_ID=${{ vars.SSO_ENTRA_CLIENT_ID  }} \
-            --set mcpContextForge.secret.SSO_ENTRA_CLIENT_SECRET=${{ vars.SSO_ENTRA_CLIENT_SECRET  }} \
+            --set mcpContextForge.secret.SSO_ENTRA_CLIENT_SECRET=${{ secrets.SSO_ENTRA_CLIENT_SECRET  }} \
             --set mcpContextForge.secret.SSO_ENTRA_TENANT_ID=${{ vars.SSO_ENTRA_TENANT_ID  }} \           
             --set mcpContextForge.secret.SSO_ENABLED=true \
             --set mcpContextForge.secret.SSO_ENTRA_ENABLED=true \
