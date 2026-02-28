@@ -18,7 +18,7 @@ jobs:
       - name: Check out my other private repo
         uses: actions/checkout@main
         with:
-          repository: https://github.com/IBM/mcp-context-forge
+          repository: IBM/mcp-context-forge
 
 
       - name: Run Tree
