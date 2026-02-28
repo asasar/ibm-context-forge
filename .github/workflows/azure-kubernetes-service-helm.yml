@@ -53,8 +53,8 @@ jobs:
             --set mcpContextForge.hpa.enabled=false \
             --set mcpContextForge.secret.BASIC_AUTH_PASSWORD=${{ vars.BASIC_AUTH_PASSWORD  }}  \
             --set mcpContextForge.secret.PLATFORM_ADMIN_PASSWORD=${{ vars.PLATFORM_ADMIN_PASSWORD  }} \
-            --set mcpContextForge.secret.SSO_ENABLED=true /
-            --set mcpContextForge.secret.SSO_ENTRA_ENABLED=true /
+            --set mcpContextForge.secret.SSO_ENABLED=true \
+            --set mcpContextForge.secret.SSO_ENTRA_ENABLED=true \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_ID=${{ vars.SSO_ENTRA_CLIENT_ID  }} \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_SECRET=${{ secrets.SSO_ENTRA_CLIENT_SECRET  }} \
             --set mcpContextForge.secret.SSO_ENTRA_TENANT_ID=${{ vars.SSO_ENTRA_TENANT_ID  }} \           
