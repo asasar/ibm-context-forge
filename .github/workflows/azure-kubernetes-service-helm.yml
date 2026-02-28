@@ -44,7 +44,6 @@ jobs:
       - name: Deploy IBM Context Forge
         run: |
           cd k3d-manifests/samples-deploy
-          cd k3d-manifests/samples-deploy
           helm upgrade --install mcp-context-forge . \
             --namespace mcp-context-forge \
             --create-namespace \
