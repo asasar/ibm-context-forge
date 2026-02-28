@@ -48,6 +48,9 @@ jobs:
             --namespace mcp-context-forge \
             --create-namespace \
             -f values.yaml \
+            --set pgadmin.enabled=true \
+            --set pgbouncer.enabled=true \
+            --set postgres.credentials.user=postgres \
             --set mcpContextForge.config.APP_DOMAIN=https://ibmcontextforge.cloudhomelab.uk \
             --set mcpContextForge.pluginConfig.enabled=true \
             --set mcpContextForge.hpa.enabled=false \
