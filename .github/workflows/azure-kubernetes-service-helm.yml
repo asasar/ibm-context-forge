@@ -50,6 +50,8 @@ jobs:
             -f values.yaml \
             --set pgadmin.enabled=true \
             --set pgbouncer.enabled=true \
+            --set mcpContextForge.replicaCount=1 \
+            --set pgadmin.enabled=false \
             --set postgres.credentials.user=postgres \
             --set mcpContextForge.config.APP_DOMAIN=https://ibmcontextforge.cloudhomelab.uk \
             --set mcpContextForge.pluginConfig.enabled=true \
