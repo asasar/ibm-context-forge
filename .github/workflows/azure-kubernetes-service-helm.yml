@@ -48,9 +48,7 @@ jobs:
             --namespace mcp-context-forge \
             --create-namespace \
             -f values.yaml \
-            --set APP_NAME=ContextForge \
-            --set APP_DOMAIN=https://ibmcontextforge.cloudhomelab.uk \
-            --set postgres.credentials.user=postgres \
+            --set mcpContextForge.config.APP_DOMAIN=https://ibmcontextforge.cloudhomelab.uk \
             --set mcpContextForge.pluginConfig.enabled=true \
             --set mcpContextForge.hpa.enabled=false \
             --set mcpContextForge.secret.BASIC_AUTH_PASSWORD="" \
