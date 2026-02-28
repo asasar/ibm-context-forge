@@ -23,7 +23,6 @@ jobs:
 
       - name: Run Tree
         run: |
-          apt-get install -y tree
           tree
 
       # - name: Log in to Docker Hub
