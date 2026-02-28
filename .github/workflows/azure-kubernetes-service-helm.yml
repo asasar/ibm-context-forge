@@ -29,6 +29,19 @@ jobs:
         run: |
           tree remote-mcp-context-forge/charts/mcp-stack
 
+      - name: Deploy cloudflare
+        run: |
+          kubectl apply -f k3d-manifests/cloudflare/deploy-cloudflare-pod.yaml
+
+      - name: Deploy nginx-sample
+        run: |
+          kubectl apply -f k3d-manifests/samples-deploy/
+
+      - name: Deploy nginx-sample
+        run: |
+          kubectl get pod -n nginx-sample
+
+
       # - name: Log in to Docker Hub
       #   uses: docker/login-action@v2
       #   with:
