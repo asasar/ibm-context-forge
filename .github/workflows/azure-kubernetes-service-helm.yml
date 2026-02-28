@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy IBM Context Forge
         run: |
-          cd k3d-manifests/samples-deploy
+          cd remote-mcp-context-forge/charts/mcp-stack
           helm upgrade --install mcp-context-forge . \
             --namespace mcp-context-forge \
             --create-namespace \
