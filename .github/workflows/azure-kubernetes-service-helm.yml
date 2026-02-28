@@ -15,10 +15,13 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Check out my other private repo
+      - name: Check out IBM/mcp-context-forge
         uses: actions/checkout@main
         with:
           repository: IBM/mcp-context-forge
+          path: remote-mcp-context-forge
+
+          
 
 
       - name: Run Tree
