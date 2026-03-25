@@ -63,8 +63,9 @@ jobs:
             --set mcpContextForge.secret.PLATFORM_ADMIN_PASSWORD=${{ vars.PLATFORM_ADMIN_PASSWORD  }} \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_ID=${{ vars.SSO_ENTRA_CLIENT_ID  }} \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_SECRET=${{ secrets.SSO_ENTRA_CLIENT_SECRET  }} \
-            --set mcpContextForge.secret.SSO_ENTRA_TENANT_ID=${{ vars.SSO_ENTRA_TENANT_ID  }} 
-            --set-file mcpContextForge.pluginConfig.plugins=../../plugins/config.yaml
+            --set mcpContextForge.secret.SSO_ENTRA_TENANT_ID=${{ vars.SSO_ENTRA_TENANT_ID  }} \
+            --set mcpContextForge.config.PLUGINS_ENABLED=true
+            
 
       - name: Deploy
         run: |
