@@ -57,30 +57,14 @@ jobs:
             --set mcpContextForge.config.APP_DOMAIN=https://ibmcontextforge.cloudhomelab.uk \
             --set mcpContextForge.pluginConfig.enabled=true \
             --set mcpContextForge.hpa.enabled=false \
-            --set mcpContextForge.config.METRICS.ENABLED=false \
+            --set mcpContextForge.config.metrics.enabled=false \
+            --set mcpContextForge.config.metrics.serviceMonitor.enabled=false \
             --set mcpContextForge.secret.BASIC_AUTH_PASSWORD=${{ vars.BASIC_AUTH_PASSWORD  }}  \
             --set mcpContextForge.secret.PLATFORM_ADMIN_PASSWORD=${{ vars.PLATFORM_ADMIN_PASSWORD  }} \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_ID=${{ vars.SSO_ENTRA_CLIENT_ID  }} \
             --set mcpContextForge.secret.SSO_ENTRA_CLIENT_SECRET=${{ secrets.SSO_ENTRA_CLIENT_SECRET  }} \
             --set mcpContextForge.secret.SSO_ENTRA_TENANT_ID=${{ vars.SSO_ENTRA_TENANT_ID  }} 
             --set-file mcpContextForge.pluginConfig.plugins=../../plugins/config.yaml
-
-      # - name: Log in to Docker Hub
-      #   uses: docker/login-action@v2
-      #   with:
-      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
-      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      # - name: Build and Push Docker Image
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     push: true
-      #     tags: your-dockerhub-username/hello-kubernetes:latest
-
-      # - name: Set up Kubectl
-      #   uses: azure/k8s-set-context@v1
-      #   with:
-      #     kubeconfig: ${{ secrets.KUBE_CONFIG_DATA }}
 
       - name: Deploy
         run: |
